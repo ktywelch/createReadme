@@ -11,17 +11,20 @@ Badges
 const inquirer = require('inquirer');
 const util = require('util');
   
+  
+  
+  
  inquirer
   .prompt([
     {
-      name: "sections",
-      type: "list",
+      name: 'section',
+      type: 'checkbox',
       message: "Please select the sections you want in a README file",
       choices: ["TableOfContents","Installation","Usage","Technologies","Credits","License"],
-    },
+    }
   ])
   .then((response) => {
-    console.log(response.sections);
+    console.log(response.section);
   });
  
  
